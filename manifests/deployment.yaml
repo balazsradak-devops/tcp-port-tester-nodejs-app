@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tcp-port-tester-nodejs-app
-        image: bradak/tcp-port-tester-nojdes-app
+        image: bradak/tcp-port-tester-nojdes-app:724be5e
         ports:
         - containerPort: 8080

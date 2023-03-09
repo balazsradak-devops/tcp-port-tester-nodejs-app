@@ -17,7 +17,7 @@ terraform {
 
 # Terraform provider is responsible for understanding API interactions and exposing resources
 provider "digitalocean" {
-  token = var.do_token
+  token = "dop_v1_06825070535cf143e91d05bf07950800c138e4d8e027515fb877f8e4d2dc98cd"
 }
 
 provider "kubernetes" {
@@ -66,7 +66,7 @@ resource "kubernetes_namespace" "namespace" {
   depends_on = [digitalocean_kubernetes_cluster.k8s]
 }
 
-# Dploys ArgoCD
+# Deploys ArgoCD
 resource "helm_release" "argocd" {
   name       = var.release_name
   repository = var.helm_repository

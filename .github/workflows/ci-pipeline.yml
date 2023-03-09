@@ -4,12 +4,12 @@ name: 'CI'
 on:
   push:
     branches:
-    - feature/*
-  # Triggers the workflow when a PR created against main branch has been closed
-  pull_request:
-    branches:
     - main
-    types: [closed]
+  # Triggers the workflow when a PR created against main branch has been closed
+  # pull_request:
+  #  branches:
+  #  - main
+  #  types: [closed]
 
 env:
   IMAGE_NAME: bradak/tcp-port-tester-nodejs-app

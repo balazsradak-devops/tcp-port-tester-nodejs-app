@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     endpoint                    = "ams3.digitaloceanspaces.com"
     region                      = "eu-west-1"
-    bucket                      = "tf-state-space"
+    bucket                      = "tf-state-for-k8s-space"
     key                         = "terraform.state"
     skip_credentials_validation = true
   }

@@ -12,7 +12,7 @@ on:
     types: [closed]
 
 env:
-  IMAGE_NAME: alhusseinjasim/simple-app
+  IMAGE_NAME: bradak/tcp-port-tester-nodejs-app
 
 jobs:
 
@@ -58,13 +58,13 @@ jobs:
 
     # Updates the image version in the deployment manifest
     - name: Update the version
-      run: sed -i "19s/\(simple-app:\).*/\1${GITHUB_SHA::7}/" ./manifests/deployment.yaml
+      run: sed -i "19s/\(tcp-port-tester-nodejs-app:\).*/\1${GITHUB_SHA::7}/" ./manifests/deployment.yaml
 
     # Commits the change
     - name: Commit files 
       run: |
-        git config --local user.email "ci@do-k8s-challenge.com"
-        git config --local user.name "ci"
+        git config --local user.email "balazs.radak@gmail.com"
+        git config --local user.name "balazsradak-devops"
         git status
         git add ./manifests
         git commit -m "Updated the version of the Docker image"

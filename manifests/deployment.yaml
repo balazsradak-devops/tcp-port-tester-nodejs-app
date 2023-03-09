@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcp-port-tester-nodejs-app
+  labels:
+    app: tcp-port-tester-nodejs-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tcp-port-tester-nodejs-app
+  template:
+    metadata:
+      labels:
+        app: tcp-port-tester-nodejs-app
+    spec:
+      containers:
+      - name: tcp-port-tester-nodejs-app
+        image: bradak/tcp-port-tester-nojdes-app
+        ports:
+        - containerPort: 8080

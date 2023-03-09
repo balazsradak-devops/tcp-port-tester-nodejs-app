@@ -1,5 +1,5 @@
-# Simple TCP port tester written in NodeJS with CI/CD workflow
-This repository is based on https://github.com/Al-HusseinHameedJasim/do-kubernetes-challenge repos.
+# Simple TCP port tester with CI/CD workflow
+This repository is based on https://github.com/Al-HusseinHameedJasim/do-kubernetes-challenge tutorial.
 
 ![Architectural diagram](images/diagram.png)
 
